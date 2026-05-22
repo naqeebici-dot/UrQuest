@@ -1,8 +1,6 @@
 // This is your Prisma schema file,
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
-// Get a free hosted Postgres database in seconds: `npx create-db`
-
 generator client {
   provider = "prisma-client"
   output   = "../generated/prisma"
@@ -10,4 +8,227 @@ generator client {
 
 datasource db {
   provider = "postgresql"
+}
+
+// ─────────────────────────────────────────────
+// ENUMS
+// ─────────────────────────────────────────────
+
+enum AttributeType {
+  INT   // Intelecto
+  LOG   // Lógica / Estrategia
+  CREA  // Creatividad
+  ESP   // Espiritualidad / Mindfulness
+  VIT   // Vitalidad
+  SOC   // Social
+}
+
+enum MissionRank {
+  C
+  B
+  A
+  S
+}
+
+enum MissionType {
+  DAILY     // Daily Quest obligatoria
+  SECONDARY // Misiones de Mundo Abierto
+  DUNGEON   // Evento de fin de semana
+}
+
+enum MissionStatus {
+  PENDING
+  COMPLETED
+  FAILED
+}
+
+enum RewardTier {
+  BRONZE  // Ocio común
+  SILVER  // Experiencias sociales
+  GOLD    // Grandes desembolsos
+  CUSTOM  // Slot de "Placeres Propios"
+}
+
+enum JobClass {
+  NONE        // Sin clase (< Nivel 20)
+  ARCHITECT   // LOG/SAP — bonus en focus
+  NOMAD       // VIT/SOC — bonus en mundo abierto
+  MYSTIC      // ESP/CREA — resetea inflación antes
+}
+
+// ─────────────────────────────────────────────
+// USER
+// ─────────────────────────────────────────────
+
+model User {
+  id              String    @id @default(uuid())
+  username        String    @unique
+  email           String    @unique
+  passwordHash    String
+
+  // Economía
+  gritBalance     Int       @default(0)   // Moneda $ASH / Grit acumulada
+  xpTotal         Int       @default(0)   // XP total para cálculo de nivel
+  level           Int       @default(1)   // Nivel actual (sqrt(xp/100))
+  hp              Int       @default(100) // Puntos de vida
+  maxHp           Int       @default(100)
+
+  // Gamificación avanzada
+  corruptionScore Int       @default(0)   // 0-100; >80 bloquea progreso
+  currentStreak   Int       @default(0)   // Racha de días activos
+  jobClass        JobClass  @default(NONE)
+
+  // Timestamps
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+  lastActiveAt    DateTime  @default(now())
+
+  // Relaciones
+  attributes      UserAttribute[]
+  missionLogs     MissionLog[]
+  purchases       Purchase[]
+}
+
+// ─────────────────────────────────────────────
+// ATTRIBUTE (catálogo)
+// ─────────────────────────────────────────────
+
+model Attribute {
+  id          String        @id @default(uuid())
+  type        AttributeType @unique
+  name        String        // "Intelecto", "Lógica", etc.
+  description String
+  color       String        // Color HEX del hexágono para esa rama
+  icon        String        // Nombre del icono / runa
+
+  users       UserAttribute[]
+  missions    Mission[]
+}
+
+// ─────────────────────────────────────────────
+// USER_ATTRIBUTE (nivel por usuario)
+// ─────────────────────────────────────────────
+
+model UserAttribute {
+  id          String    @id @default(uuid())
+  userId      String
+  attributeId String
+  level       Int       @default(0)  // Nivel de la rama (0-∞)
+  xp          Int       @default(0)  // XP acumulado en esta rama
+
+  user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  attribute   Attribute @relation(fields: [attributeId], references: [id])
+
+  @@unique([userId, attributeId])
+}
+
+// ─────────────────────────────────────────────
+// MISSION (catálogo de misiones)
+// ─────────────────────────────────────────────
+
+model Mission {
+  id               String        @id @default(uuid())
+  title            String
+  description      String
+  rank             MissionRank   @default(C)
+  type             MissionType   @default(DAILY)
+
+  // Economía de la misión
+  gritReward       Int           // Grit ganado al completar
+  xpReward         Int           // XP ganado al completar
+  hpPenalty        Int           @default(10)  // HP perdido si falla
+  gritPenalty      Int           @default(5)   // Grit perdido si falla
+
+  // Duración mínima en minutos (anti-cheat basado en tiempo)
+  minDurationMin   Int           @default(0)
+
+  // Atributo que sube esta misión
+  attributeId      String
+  attribute        Attribute     @relation(fields: [attributeId], references: [id])
+
+  // Misión con racha (Misión Oculta)
+  streakRequired   Int           @default(0)   // 0 = siempre visible
+  unlockTitle      String?       // Título que desbloquea (ej. "Bibliotecario")
+
+  isActive         Boolean       @default(true)
+  createdAt        DateTime      @default(now())
+
+  logs             MissionLog[]
+}
+
+// ─────────────────────────────────────────────
+// MISSION_LOG (misiones realizadas por usuario)
+// ─────────────────────────────────────────────
+
+model MissionLog {
+  id            String        @id @default(uuid())
+  userId        String
+  missionId     String
+  status        MissionStatus @default(PENDING)
+
+  startedAt     DateTime      @default(now())
+  completedAt   DateTime?
+
+  // Anti-cheat: tiempo real registrado (segundos)
+  elapsedSeconds Int          @default(0)
+
+  // Grit/XP/HP efectivamente aplicados (pueden variar por multiplicadores)
+  gritApplied   Int           @default(0)
+  xpApplied     Int           @default(0)
+  hpApplied     Int           @default(0)  // Negativo si es penalización
+
+  user          User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  mission       Mission       @relation(fields: [missionId], references: [id])
+
+  @@index([userId, status])
+}
+
+// ─────────────────────────────────────────────
+// REWARD (catálogo de recompensas / vicios)
+// ─────────────────────────────────────────────
+
+model Reward {
+  id              String      @id @default(uuid())
+  name            String
+  description     String
+  tier            RewardTier  @default(BRONZE)
+
+  // Precio base en Grit (puede subir por inflación)
+  baseCost        Int
+  // Precio actual (recalculado por la lógica de inflación)
+  currentCost     Int
+
+  // Inflación: nº de compras esta semana para este reward (global o por usuario)
+  weeklyPurchases Int         @default(0)
+  // Factor de inflación por compra (ej. 0.10 = +10% por compra)
+  inflationRate   Float       @default(0.10)
+
+  isActive        Boolean     @default(true)
+  isCustomSlot    Boolean     @default(false)  // "Slot Propio" del usuario
+
+  createdAt       DateTime    @default(now())
+  updatedAt       DateTime    @updatedAt
+
+  purchases       Purchase[]
+}
+
+// ─────────────────────────────────────────────
+// PURCHASE (historial de canjes)
+// ─────────────────────────────────────────────
+
+model Purchase {
+  id          String    @id @default(uuid())
+  userId      String
+  rewardId    String
+
+  gritSpent   Int       // Grit gastado (precio en el momento de compra)
+  purchasedAt DateTime  @default(now())
+
+  // Log de bienestar al día siguiente (Factor "Realidad")
+  nextDayProductivityScore Int?   // 1-10, nullable hasta que el usuario lo rellene
+
+  user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  reward      Reward    @relation(fields: [rewardId], references: [id])
+
+  @@index([userId, purchasedAt])
 }
