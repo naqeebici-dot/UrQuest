@@ -119,7 +119,7 @@ class MissionCard extends StatelessWidget {
                         _Chip(
                           icon: Icons.hexagon_outlined,
                           color: AppColors.neonGold,
-                          label: '+${mission.gritReward} \$ASH',
+                          label: '+${mission.gritReward} AURA',
                         ),
                         const SizedBox(width: 6),
                         // Atributo

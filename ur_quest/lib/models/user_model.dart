@@ -1,3 +1,5 @@
+import 'dart:math';
+
 /// Modelo de datos del Usuario (MVP mock)
 class UserModel {
   final String id;
@@ -25,6 +27,21 @@ class UserModel {
   });
 
   double get hpPercent => maxHp > 0 ? hp / maxHp : 0.0;
+
+  /// Alias de gritBalance para usar en la UI con el nuevo nombre "AURA"
+  int get auraBalance => gritBalance;
+
+  /// XP necesario (acumulado) para alcanzar el siguiente nivel: 100 * level^1.5
+  int get xpForNextLevel => (100 * pow(level, 1.5)).round();
+
+  double get xpPercent {
+    final prev = level > 1 ? (100 * pow(level - 1, 1.5)).round() : 0;
+    final next = xpForNextLevel;
+    final range = next - prev;
+    if (range <= 0) return 1.0;
+    return ((xpTotal - prev) / range).clamp(0.0, 1.0);
+  }
+
   int get xpToNextLevel {
     final next = (level + 1) * (level + 1) * 100;
     return next - xpTotal;

@@ -43,7 +43,11 @@ export async function createUser(req, res) {
       });
     }
 
-    return res.status(201).json({ message: "Usuario creado.", user });
+    // Alias auraBalance para compatibilidad con el nuevo nombre de la moneda
+    return res.status(201).json({
+      message: "Usuario creado.",
+      user: { ...user, auraBalance: user.gritBalance },
+    });
   } catch (err) {
     if (err.code === "P2002") {
       return res.status(409).json({ error: "El username o email ya existe." });

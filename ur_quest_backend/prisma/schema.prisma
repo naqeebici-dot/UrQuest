@@ -151,6 +151,8 @@ model Mission {
   unlockTitle      String?       // Título que desbloquea (ej. "Bibliotecario")
 
   isActive         Boolean       @default(true)
+  isDaily          Boolean       @default(true)   // true = misión diaria; false = misión de largo plazo
+  dueDate          DateTime?                       // Fecha límite (solo para misiones no diarias)
   createdAt        DateTime      @default(now())
 
   logs             MissionLog[]

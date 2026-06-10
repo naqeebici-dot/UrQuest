@@ -78,8 +78,9 @@ export async function completeMission(req: Request, res: Response) {
     ]);
 
     return res.status(200).json({
-      message: `Felicidades. Has canjeado tu esfuerzo. +${xpFinal} XP / +${mission.gritReward} Grit.`,
-      user: updatedUser,
+      message: `Felicidades. Has canjeado tu esfuerzo. +${xpFinal} XP / +${mission.gritReward} AURA.`,
+      user: { ...updatedUser, auraBalance: updatedUser.gritBalance },
+      aura: { reward: mission.gritReward, balance: updatedUser.gritBalance },
       missionLog,
       levelUp: newLevel > user.level
         ? { levelUp: true, newLevel }

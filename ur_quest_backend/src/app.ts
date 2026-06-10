@@ -5,6 +5,7 @@ import cors from "cors";
 import userRoutes    from "./routes/users.js";
 import missionRoutes from "./routes/missions.js";
 import rewardRoutes  from "./routes/rewards.js";
+import marketRoutes  from "./routes/market.js";
 
 const app  = express();
 const PORT = process.env.PORT || 3000;
@@ -17,6 +18,7 @@ app.use(express.json());
 app.use("/api/users",    userRoutes);
 app.use("/api/missions", missionRoutes);
 app.use("/api/rewards",  rewardRoutes);
+app.use("/api/market",   marketRoutes);
 
 // ── Health check ────────────────────────────────────────────
 app.get("/", (_req, res) => {
