@@ -30,7 +30,7 @@ Resumen visual de los pilares:
 | Gamificación             | atributos + misiones         | Los usuarios sienten progreso diario |
 | (aprendizaje + juego)    | con consecuencias            | y constante                          |
 |                          |                              |                                      |
-| Economía del             | Grit ganado con trabajo      | Convierte el autocontrol en algo     |  | esfuerzo                 | y gastado en recompensas     | tangible y adictivo                  |  
+| Economía del esfuerzo    | Grit ganado con trabajo      | Convierte el autocontrol en algo     |  |                          | y gastado en recompensas     | tangible y adictivo                  |  
 |                          |                              |                                      |
 | Espejo honesto           | Anti-trampa, penalizaciones, | Los usuarios confían en el sistema   |
 |                          | medidor de corrupción        | porque no les miente (real y preciso)|
