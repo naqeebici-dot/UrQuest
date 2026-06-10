@@ -15,7 +15,7 @@ Para garantizar un lanzamiento rápido y efectivo, el MVP se centrará en las si
 2. **Economía Local:**
    - Tienda básica con "Inflación de Vicios" local (solo para el usuario).
 
-3. **Estética y UI:**
+3. **UX/UI:**
    - Interfaz en modo oscuro con diseño minimalista.
    - Uso de símbolos o runas en lugar de avatares complejos para ahorrar tiempo de diseño.
 
@@ -45,7 +45,7 @@ El Marketplace de Vicios es el corazón de la app. La moneda ($ASH o Credits) se
 | Entrenar (Gym)           | +50           | Salir de fiesta         | 1,000     |
 | Completar proyecto LOG   | +200          | "Capricho mayor"        | 2,500     |
 
-**Inflación de Vicio:** Si compras mucho de un vicio, su precio sube esa semana, obligando a ser más productivo.
+**Inflación de Vicio:** Si compras mucho de un vicio, su precio sube esa semana, obligando a a aumentar la productividad.
 
 ## 3. Tipos de Misiones
 - **Daily Quests (Obligatorias):** Penalización si no se cumplen (pérdida de monedas o daño a HP).
