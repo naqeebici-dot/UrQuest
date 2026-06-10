@@ -150,6 +150,7 @@ El sistema debe ser un "Game Master" severo.
 3. **La Tentación:** El usuario quiere salir de fiesta. Abre la tienda y ve que cuesta 800 Grit. Mira su saldo: tiene 450.
 4. **El Impulso:** Para conseguir los 350 que le faltan, decide aceptar una "Misión de Rango A": Correr 10km.
 5. **La Recompensa:** Al terminar, el sistema suena con un tono metálico: "Felicidades. Has canjeado tu esfuerzo por gratificación. Disfruta con responsabilidad".
+
 **Pantallas clave**
       1- **Inicio**:
        - HP bar, Grit actual, nivel.
