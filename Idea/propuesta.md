@@ -156,18 +156,22 @@ El sistema debe ser un "Game Master" severo.
        - HP bar, Grit actual, nivel.
        - Hexágono de atributos (en el centro e interactivo).
        - Daily quests con tiempo/cuenta atrás (ñe, esto puede motivar o estresar).
+       
       2- **Misiones**:
        - Lista filtrable por atributo y rango.
        - Vista de misiones activas con countdown y botón de "completar misión" .
        - Historial de misiones completadas, filtrables por días, semanas, meses (de primeras una             lista y luego mas adelante poder ver las estadísticas como cuando te metes en la app de             los pasos).
+       
       3- **Tienda de recompensas**:
        - Recompensas con su precio en GRIT.
        - Indicador de inflación: si abusas de una recompensa el precio sube.
        - Botón de canjear, con confirmación (así evitamos canjear una recompensa dándole por error).
+       
       4- **Perfil**:
        - Avatar con su estado actual.
        - Hexágono de stats completo con histórico.
        - Logros desbloqueados y rachas activas.
+       
       5- **Ajustes de la aplicación**:
        - Accesible desde el perfil.
        - Gestionar cuenta (nombre usuario, email, cambiar contraseña...).
