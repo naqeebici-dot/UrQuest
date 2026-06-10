@@ -24,6 +24,16 @@ Para garantizar un lanzamiento rápido y efectivo, el MVP se centrará en las si
    - Validación manual o basada en tiempo para las misiones.
 
 Estas funcionalidades forman el núcleo del sistema y permitirán validar la aceptación del mercado antes de añadir características avanzadas como biometría, avatares evolutivos y sistemas globales.
+Resumen visual de los pilares:
+| Pilar                    | Significado                  |Importancia                           |
+|--------------------------|------------------------------|--------------------------------------|
+| Gamificación             | atributos + misiones         | Los usuarios sienten progreso diario |
+| (aprendizaje + juego)    | con consecuencias            | y constante                          |
+|                          |                              |                                      |
+| Economía del             | Grit ganado con trabajo      | Convierte el autocontrol en algo     |  | esfuerzo                 | y gastado en recompensas     | tangible y adictivo                  |  
+|                          |                              |                                      |
+| Espejo honesto           | Anti-trampa, penalizaciones, | Los usuarios confían en el sistema   |
+|                          | medidor de corrupción        | porque no les miente (real y preciso)|
 
 ## 1. El Sistema de Atributos: El "Polifacético"
 Cada usuario tendrá un hexágono de stats que representa áreas cerebrales reales. Cada misión sube una rama:
