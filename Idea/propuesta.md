@@ -62,6 +62,7 @@ El Marketplace de Vicios es el corazón de la app. La moneda ($ASH o Credits) se
 
 ## 4. Interfaz y Estética
 - **Dark Mode Permanente:** Estética neón, azul eléctrico y negro, inspirada en sistemas de Manhwa.
+  Posibilidad de cambiarla (colores, daltonismo, problemas de vista. Ver pto.13 ajustes).
 - **Avatar:** Modelo 3D o pixel-art que cambia según stats y consumo de vicios.
 
 ## 5. Factor "Realidad" (Drogas y Control)
@@ -174,7 +175,7 @@ El sistema debe ser un "Game Master" severo.
  - Gestionar cuenta (nombre usuario, email, cambiar contraseña...).
  - Juego (dificultad normal/hard y se podría añadir algo mas pero no me da la cabeza ahora).
  - Notificaciones (activar/desactivar, hora del recordatorio diario, personalizar mensaje recordatorio).
- - Diseño (cambiar colores: azul eléctrico, violeta, cian, verde vibrante...).
+ - Diseño (cambiar colores: azul eléctrico, violeta, cian, verde vibrante...; paleta accesible para daltónicos o personas con problemas de vista; cambiar tamaño fuente).
  - Privacidad (resetear, política de privacidad).
  - Acerca de (versión de la app, créditos, contactos, valorar en la app store).
    
