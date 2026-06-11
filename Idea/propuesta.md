@@ -77,8 +77,10 @@ El Marketplace de Vicios es el corazón de la app. La moneda ($ASH o Credits) se
 - System: Overdrive
 - ViceLeveling
 - Dopamine Dealer
+- MyQuest
 
 El usuario es un "Jugador" cuyo hardware es su cuerpo y su software es su mente.
+Slogan -> El esfuerzo tiene precio. La recompensa también.
 
 ---
 
