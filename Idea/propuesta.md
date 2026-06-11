@@ -27,8 +27,8 @@ Estas funcionalidades forman el núcleo del sistema y permitirán validar la ace
 Resumen visual de los pilares:
 | Pilar                    | Significado                  |Importancia                           |
 |--------------------------|------------------------------|--------------------------------------|
-| Gamificación             | atributos + misiones         | Los usuarios sienten progreso diario |
-| (aprendizaje + juego)    | con consecuencias            | y constante                          |
+| Gamificación     (aprendizaje + juego)         | atributos + misiones         | Los usuarios sienten progreso diario |
+|    | con consecuencias            | y constante                          |
 |                          |                              |                                      |
 | Economía del esfuerzo    | Grit ganado con trabajo      | Convierte el autocontrol en algo     |  |                          | y gastado en recompensas     | tangible y adictivo                  |  
 |                          |                              |                                      |
