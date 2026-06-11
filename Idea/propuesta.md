@@ -150,25 +150,25 @@ El sistema debe ser un "Game Master" severo.
 3. **La Tentación:** El usuario quiere salir de fiesta. Abre la tienda y ve que cuesta 800 Grit. Mira su saldo: tiene 450.
 4. **El Impulso:** Para conseguir los 350 que le faltan, decide aceptar una "Misión de Rango A": Correr 10km.
 5. **La Recompensa:** Al terminar, el sistema suena con un tono metálico: "Felicidades. Has canjeado tu esfuerzo por gratificación. Disfruta con responsabilidad".
-
-##**Pantallas clave** 
-      1-### **Inicio**:
+### **Pantallas clave** 
+ 1-### **Inicio**:
        - HP bar, Grit actual, nivel.
        - Hexágono de atributos (en el centro e interactivo).
        - Daily quests con tiempo/cuenta atrás (ñe, esto puede motivar o estresar).
-      2-### **Misiones**:
+      
+ 2-### **Misiones**:
        - Lista filtrable por atributo y rango.
        - Vista de misiones activas con countdown y botón de "completar misión" .
        - Historial de misiones completadas, filtrables por días, semanas, meses (de primeras una lista y luego mas adelante poder ver las estadísticas como cuando te metes           en la app de los pasos).
-      3-###**Tienda de recompensas**:
+ 3-### **Tienda de recompensas**:
        - Recompensas con su precio en GRIT.
        - Indicador de inflación: si abusas de una recompensa el precio sube.
        - Botón de canjear, con confirmación (así evitamos canjear una recompensa dándole por error).
-      4-###**Perfil**:
+ 4-### **Perfil**:
        - Avatar con su estado actual.
        - Hexágono de stats completo con histórico.
        - Logros desbloqueados y rachas activas.
-      5-###**Ajustes de la aplicación**:
+ 5-### **Ajustes de la aplicación**:
        - Accesible desde el perfil.
        - Gestionar cuenta (nombre usuario, email, cambiar contraseña...).
        - Juego (dificultad normal/hard y se podría añadir algo mas pero no me da la cabeza ahora).
