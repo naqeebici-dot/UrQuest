@@ -151,34 +151,34 @@ El sistema debe ser un "Game Master" severo.
 ### **Pantallas clave** 
 1-**Inicio:**
  - HP bar, Grit actual, nivel.
-       - Hexágono de atributos (en el centro e interactivo).
-       - Daily quests con tiempo/cuenta atrás (ñe, esto puede motivar o estresar).
+ - Hexágono de atributos (en el centro e interactivo).
+ - Daily quests con tiempo/cuenta atrás (ñe, esto puede motivar o estresar).
       
 2-**Misiones:**
-       - Lista filtrable por atributo y rango.
-       - Vista de misiones activas con countdown y botón de "completar misión" .
-       - Historial de misiones completadas, filtrables por días, semanas, meses (de primeras una lista y luego mas adelante poder ver las estadísticas como cuando te metes           en la app de los pasos).
+ - Lista filtrable por atributo y rango.
+ - Vista de misiones activas con countdown y botón de "completar misión" .
+ - Historial de misiones completadas, filtrables por días, semanas, meses (de primeras una lista y luego mas adelante poder ver las estadísticas como cuando te metes           en la app de los pasos).
        
 3-**Tienda de recompensas:**
-       - Recompensas con su precio en GRIT.
-       - Indicador de inflación: si abusas de una recompensa el precio sube.
-       - Botón de canjear, con confirmación (así evitamos canjear una recompensa dándole por error).
+ - Recompensas con su precio en GRIT.
+ - Indicador de inflación: si abusas de una recompensa el precio sube.
+ - Botón de canjear, con confirmación (así evitamos canjear una recompensa dándole por error).
 
 4-**Perfil:**
-       - Avatar con su estado actual.
-       - Hexágono de stats completo con histórico.
-       - Logros desbloqueados y rachas activas.
+ - Avatar con su estado actual.
+ - Hexágono de stats completo con histórico.
+ - Logros desbloqueados y rachas activas.
 
 5-**Ajustes de la aplicación:**
-       - Accesible desde el perfil.
-       - Gestionar cuenta (nombre usuario, email, cambiar contraseña...).
-       - Juego (dificultad normal/hard y se podría añadir algo mas pero no me da la cabeza ahora).
-       - Notificaciones (activar/desactivar, hora del recordatorio diario, personalizar mensaje recordatorio).
-       - Diseño (cambiar colores: azul eléctrico, violeta, cian, verde vibrante...).
-       - Privacidad (resetear, política de privacidad).
-       - Acerca de (versión de la app, créditos, contactos, valorar en la app store).
+ - Accesible desde el perfil.
+ - Gestionar cuenta (nombre usuario, email, cambiar contraseña...).
+ - Juego (dificultad normal/hard y se podría añadir algo mas pero no me da la cabeza ahora).
+ - Notificaciones (activar/desactivar, hora del recordatorio diario, personalizar mensaje recordatorio).
+ - Diseño (cambiar colores: azul eléctrico, violeta, cian, verde vibrante...).
+ - Privacidad (resetear, política de privacidad).
+ - Acerca de (versión de la app, créditos, contactos, valorar en la app store).
    
-   IMPORTANTE -> Centrarse en la "fiesta" al completar una misión (sonido, animación, Grit creciendo, avatar cambiando...).
+   **IMPORTANTE** -> Centrarse en la "fiesta" al completar una misión (sonido, animación, Grit creciendo, avatar cambiando...).
    
 ## 14. Evolución de Clase (Especialización)
 
