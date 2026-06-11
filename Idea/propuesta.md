@@ -28,12 +28,8 @@ Resumen visual de los pilares:
 | Pilar                    | Significado                  |Importancia                           |
 |--------------------------|------------------------------|--------------------------------------|
 | Gamificación     (aprendizaje + juego)         | atributos + misiones  con consecuencias       | Los usuarios sienten progreso diario y constante  |
-|    |             |                          |
-|                          |                              |                                      |
 | Economía del esfuerzo    | Grit ganado con trabajo      | Convierte el autocontrol en algo     |  |                          | y gastado en recompensas     | tangible y adictivo                  |  
-|                          |                              |                                      |
-| Espejo honesto           | Anti-trampa, penalizaciones, | Los usuarios confían en el sistema   |
-|                          | medidor de corrupción        | porque no les miente (real y preciso)|
+| Espejo honesto           | Anti-trampa, penalizaciones,medidor de corrupción | Los usuarios confían en el sistema porque no les miente (real y preciso)  |
 
 ## 1. El Sistema de Atributos: El "Polifacético"
 Cada usuario tendrá un hexágono de stats que representa áreas cerebrales reales. Cada misión sube una rama:
