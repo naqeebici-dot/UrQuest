@@ -150,7 +150,7 @@ El sistema debe ser un "Game Master" severo.
 5. **La Recompensa:** Al terminar, el sistema suena con un tono metálico: "Felicidades. Has canjeado tu esfuerzo por gratificación. Disfruta con responsabilidad".
 ### **Pantallas clave** 
 1-**Inicio:**
-       - HP bar, Grit actual, nivel.
+ - HP bar, Grit actual, nivel.
        - Hexágono de atributos (en el centro e interactivo).
        - Daily quests con tiempo/cuenta atrás (ñe, esto puede motivar o estresar).
       
