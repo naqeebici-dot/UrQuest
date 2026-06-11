@@ -161,7 +161,7 @@ El sistema debe ser un "Game Master" severo.
        - Vista de misiones activas con countdown y botón de "completar misión" .
        - Historial de misiones completadas, filtrables por días, semanas, meses (de primeras una lista y luego mas adelante poder ver las estadísticas como cuando te metes           en la app de los pasos).
        
-3-### **Tienda de recompensas:**
+3-**Tienda de recompensas:**
        - Recompensas con su precio en GRIT.
        - Indicador de inflación: si abusas de una recompensa el precio sube.
        - Botón de canjear, con confirmación (así evitamos canjear una recompensa dándole por error).
